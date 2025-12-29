@@ -1,51 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.2" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 http://docs.oasis-open.org/xliff/v1.2/os/xliff-core-1.2-strict.xsd">
-  <file original="OneSignalNotificationServiceExtension/en.lproj/InfoPlist.strings" datatype="plaintext" source-language="en" target-language="nan">
-    <header>
-      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="16.4" build-num="16F6"/>
-    </header>
-    <body>
-      <trans-unit id="CFBundleDisplayName" xml:space="preserve">
-        <source>OneSignalNotificationServiceExtension</source>
-        <note>Bundle display name</note>
-      </trans-unit>
-      <trans-unit id="CFBundleName" xml:space="preserve">
-        <source>OneSignalNotificationServiceExtension</source>
-        <note>Bundle name</note>
-      </trans-unit>
-      <trans-unit id="NSHumanReadableCopyright" xml:space="preserve">
-        <source/>
-        <note>Copyright (human-readable)</note>
-      </trans-unit>
-    </body>
-  </file>
-  <file original="Supporting Files/en.lproj/InfoPlist.strings" datatype="plaintext" source-language="en" target-language="nan">
-    <header>
-      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="16.4" build-num="16F6"/>
-    </header>
-    <body>
-      <trans-unit id="CFBundleDisplayName" xml:space="preserve">
-        <source>OPass</source>
-        <note>Bundle display name</note>
-      </trans-unit>
-      <trans-unit id="CFBundleName" xml:space="preserve">
-        <source>OPass</source>
-        <note>Bundle name</note>
-      </trans-unit>
-      <trans-unit id="NSCalendarsUsageDescription" xml:space="preserve">
-        <source>App requires your consent to access calendars during use</source>
-        <note>Privacy - Calendars Usage Description</note>
-      </trans-unit>
-      <trans-unit id="NSCameraUsageDescription" xml:space="preserve">
-        <source>Use camera to scan QR code in order to get token</source>
-        <note>Privacy - Camera Usage Description</note>
-      </trans-unit>
-      <trans-unit id="NSLocationWhenInUseUsageDescription" xml:space="preserve">
-        <source>App requires your consent to access location during use</source>
-        <note>Privacy - Location When In Use Usage Description</note>
-      </trans-unit>
-    </body>
-  </file>
   <file original="Supporting Files/Localizable.xcstrings" source-language="en" target-language="nan" datatype="plaintext">
     <header>
       <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="16.4" build-num="16F6"/>
