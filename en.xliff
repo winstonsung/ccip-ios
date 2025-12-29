@@ -43,8 +43,8 @@
         <note>Privacy - Calendars Usage Description</note>
       </trans-unit>
       <trans-unit id="NSCameraUsageDescription" xml:space="preserve">
-        <source>Use Camera to scan QRCode inoder to get token</source>
-        <target>Use Camera to scan QRCode inoder to get token</target>
+        <source>Use camera to scan QR code in order to get token</source>
+        <target>Use camera to scan QR code in order to get token</target>
         <note>Privacy - Camera Usage Description</note>
       </trans-unit>
       <trans-unit id="NSLocationWhenInUseUsageDescription" xml:space="preserve">
