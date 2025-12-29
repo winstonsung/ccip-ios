@@ -56,6 +56,10 @@ jobs:
             exit 0
           fi
 
+          for file in "${files[@]}"; do
+            perl -i -0777 -pe 's/<file original=".*<file original="Supporting Files\/Localizable\.xcstrings"/<file original="Supporting Files\/Localizable.xcstrings"/sg' "$file"
+          done
+
           tmp=".xliff_tmp"
           rm -rf "$tmp"
           mkdir -p "$tmp"
