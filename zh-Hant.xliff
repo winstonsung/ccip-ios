@@ -285,7 +285,7 @@
       </trans-unit>
       <trans-unit id="Loading" xml:space="preserve">
         <source>Loading</source>
-        <target state="translated">載入中</target>
+        <target state="translated">正在載入</target>
         <note/>
       </trans-unit>
       <trans-unit id="Loading Announcements..." xml:space="preserve">
@@ -300,7 +300,6 @@
       </trans-unit>
       <trans-unit id="Made with Love" translate="no" xml:space="preserve">
         <source>Made with Love</source>
-        <target state="translated">Made with Love</target>
         <note/>
       </trans-unit>
       <trans-unit id="More" xml:space="preserve">
@@ -522,7 +521,7 @@
       </trans-unit>
       <trans-unit id="Something Went Wrong" xml:space="preserve">
         <source>Something Went Wrong</source>
-        <target state="translated">出現了一些錯誤</target>
+        <target state="translated">出了一些問題</target>
         <note/>
       </trans-unit>
       <trans-unit id="Source Code" xml:space="preserve">

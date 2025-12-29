@@ -300,7 +300,6 @@
       </trans-unit>
       <trans-unit id="Made with Love" translate="no" xml:space="preserve">
         <source>Made with Love</source>
-        <target state="translated">Made with Love</target>
         <note/>
       </trans-unit>
       <trans-unit id="More" xml:space="preserve">
