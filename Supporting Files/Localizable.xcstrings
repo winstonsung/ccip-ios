@@ -1043,7 +1043,7 @@
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "載入中"
+            "value" : "正在載入"
           }
         }
       }
@@ -1073,18 +1073,6 @@
     "Made with Love" : {
       "localizations" : {
         "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Made with Love"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Made with Love"
-          }
-        },
-        "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Made with Love"
@@ -2086,7 +2074,7 @@
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "出現了一些錯誤"
+            "value" : "出了一些問題"
           }
         }
       }
