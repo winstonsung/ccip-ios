@@ -42,11 +42,21 @@ struct SettingsView: View {
     @ViewBuilder
     private func introductionSection() -> some View {
         VStack(spacing: 5) {
-            Image(.inAppIcon)
-                .resizable()
-                .scaledToFit()
-                .frame(width: 70)
-                .clipShape(.rect(cornerRadius: 15.6))  // radius = width * 2/9
+            if #available(iOS 26, *) {
+                Image(.inAppIcon)
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 70)
+                    .clipShape(.rect(cornerRadius: 15.6))  // radius = width * 2/9
+                    .glassEffect(in: .rect(cornerRadius: 15.6))
+            } else {
+                Image(.inAppIcon)
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 70)
+                    .clipShape(.rect(cornerRadius: 15.6))  // radius = width * 2/9
+            }
+
 
             Text("OPass")
                 .font(.title2)
@@ -62,7 +72,7 @@ struct SettingsView: View {
 
     @ViewBuilder
     private func generalSection() -> some View {
-        Section("GENERAL") {
+        Section("General") {
             generalSectionButton(
                 "General",
                 iconSystemName: "gear",
@@ -99,7 +109,7 @@ struct SettingsView: View {
 
     @ViewBuilder
     private func aboutSection() -> some View {
-        Section("ABOUT") {
+        Section("About") {
             aboutSectionButton(
                 "Official Website",
                 urlText: websiteURL.absoluteString,

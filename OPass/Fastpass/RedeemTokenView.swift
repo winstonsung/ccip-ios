@@ -24,61 +24,116 @@ struct RedeemTokenView: View {
     @Environment(\.colorScheme) private var colorScheme
     
     var body: some View {
-        VStack {
-            Form {
-                FastpassLogoView()
-                    .frame(height: UIScreen.main.bounds.width * 0.4)
-                    .listRowBackground(Color.white.opacity(0))
-                
-                Section {
-                    Button { self.isCameraSOCPresented = true } label: {
+        Form {
+            FastpassLogoView()
+                .frame(height: UIScreen.main.bounds.width * 0.4)
+                .listRowBackground(Color.white.opacity(0))
+            
+            Section {
+                Button { self.isCameraSOCPresented = true } label: {
+                    Label {
                         HStack {
-                            Image(systemName: "camera")
-                                .foregroundColor(Color.white)
-                                .padding(.horizontal, 7)
-                                .padding(.vertical, 10)
-                                .background(Color.blue)
-                                .cornerRadius(9)
                             Text("Scan QR code with camera")
-                                .foregroundColor(colorScheme == .dark ? .white : .black)
+                                .foregroundStyle(colorScheme == .dark ? .white : .black)
                             Spacer()
-                            Image(systemName: "chevron.right").foregroundColor(.gray)
+                            Image(systemName: "chevron.right")
+                                .font(.system(size: 13, weight: .bold))
+                                .foregroundColor(.gray.opacity(0.55))
+                                .padding(.trailing, 1.5)
                         }
+                    } icon: {
+                        ZStack {
+                            if #available(iOS 26, *) {
+                                Image(systemName: "app.fill")
+                                    .foregroundStyle(.blue)
+                                    .font(.system(size: 28))
+                                    .symbolColorRenderingMode(.gradient)
+                                Image(systemName: "camera.fill")
+                                    .foregroundStyle(.white)
+                                    .font(.system(size: 13))
+                            } else {
+                                Image(systemName: "app.fill")
+                                    .foregroundStyle(.blue)
+                                    .font(.system(size: 28))
+                                Image(systemName: "camera.fill")
+                                    .foregroundStyle(.white)
+                                    .font(.system(size: 13))
+                            }
+                        }
+                        
                     }
-                    
-                    PhotosPicker(selection: $selectedPhotoItem, matching: .any(of: [.images, .not(.livePhotos)])) {
+                }
+                
+                PhotosPicker(selection: $selectedPhotoItem, matching: .any(of: [.images, .not(.livePhotos)])) {
+                    Label {
                         HStack {
-                            Image(systemName: "photo")
-                                .foregroundColor(Color.white)
-                                .padding(.horizontal, 7)
-                                .padding(.vertical, 10)
-                                .background(Color.green)
-                                .cornerRadius(9)
                             Text("Select a picture to scan QR code")
-                                .foregroundColor(colorScheme == .dark ? .white : .black)
+                                .foregroundStyle(colorScheme == .dark ? .white : .black)
                             Spacer()
-                            Image(systemName: "chevron.right").foregroundColor(.gray)
+                            Image(systemName: "chevron.right")
+                                .font(.system(size: 13, weight: .bold))
+                                .foregroundColor(.gray.opacity(0.55))
+                                .padding(.trailing, 1.5)
+                        }
+                    } icon: {
+                        ZStack {
+                            if #available(iOS 26, *) {
+                                Image(systemName: "app.fill")
+                                    .foregroundStyle(.green)
+                                    .font(.system(size: 28))
+                                    .symbolColorRenderingMode(.gradient)
+                                Image(systemName: "photo.fill")
+                                    .foregroundStyle(.white)
+                                    .font(.system(size: 13))
+                            } else {
+                                Image(systemName: "app.fill")
+                                    .foregroundStyle(.green)
+                                    .font(.system(size: 28))
+                                Image(systemName: "photo.fill")
+                                    .foregroundStyle(.white)
+                                    .font(.system(size: 13))
+                            }
                         }
                     }
-                    .alert("No QR code found in picture", isPresented: $isNoQRCodeAlertPresented)
-                    
-                    Button { self.isManuallySOCPresented = true } label: {
+                }
+                .alert("No QR code found in picture", isPresented: $isNoQRCodeAlertPresented)
+                
+                Button { self.isManuallySOCPresented = true } label: {
+                    Label {
                         HStack {
-                            Image(systemName: "keyboard")
-                                .foregroundColor(Color.white)
-                                .padding(.horizontal, 7)
-                                .padding(.vertical, 10)
-                                .background(Color.purple)
-                                .cornerRadius(9)
                             Text("Enter token manually")
-                                .foregroundColor(colorScheme == .dark ? .white : .black)
+                                .foregroundStyle(colorScheme == .dark ? .white : .black)
                             Spacer()
-                            Image(systemName: "chevron.right").foregroundColor(.gray)
+                            Image(systemName: "chevron.right")
+                                .font(.system(size: 13, weight: .bold))
+                                .foregroundColor(.gray.opacity(0.55))
+                                .padding(.trailing, 1.5)
+                        }
+                    } icon: {
+                        ZStack {
+                            if #available(iOS 26, *) {
+                                Image(systemName: "app.fill")
+                                    .foregroundStyle(.orange)
+                                    .font(.system(size: 28))
+                                    .symbolColorRenderingMode(.gradient)
+                                Image(systemName: "keyboard.fill")
+                                    .foregroundStyle(.white)
+                                    .font(.system(size: 13))
+                            } else {
+                                Image(systemName: "app.fill")
+                                    .foregroundStyle(.orange)
+                                    .font(.system(size: 28))
+                                Image(systemName: "keyboard.fill")
+                                    .foregroundStyle(.white)
+                                    .font(.system(size: 13))
+                            }
                         }
                     }
                 }
             }
         }
+        .contentMargins(.top, 0)
+        .listSectionSpacing(5)
         .http403Alert(title: "Couldn't verify your identity", isPresented: $isHttp403AlertPresented)
         .alert("Couldn't verify your identity", message: "Invaild token", isPresented: $isInvaildTokenAlertPresented)
         .slideOverCard(isPresented: $isCameraSOCPresented, backgroundColor: (colorScheme == .dark ? .init(red: 28/255, green: 28/255, blue: 30/255) : .white)) {
@@ -109,7 +164,7 @@ struct RedeemTokenView: View {
                                 Spacer()
                             }
                             .padding(10)
-                        }
+                        }		
                     }
                 
                 VStack(alignment: .leading) {
@@ -232,8 +287,10 @@ struct RedeemTokenView: View {
 #if DEBUG
 struct RedeemTokenView_Previews: PreviewProvider {
     static var previews: some View {
-        RedeemTokenView()
-            .environmentObject(OPassStore.mock().event!)
+        NavigationStack {
+            RedeemTokenView()
+                .environmentObject(OPassStore.mock().event!)
+        }
     }
 }
 #endif

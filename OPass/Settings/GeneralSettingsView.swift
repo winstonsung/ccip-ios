@@ -18,10 +18,31 @@ struct GeneralSettingsView: View {
     var body: some View {
         Form {
             Section {
-                Toggle("Haptic Feedback", systemImage: "hand.rays", isOn: $hapticFeedback)
-                    .symbolRenderingMode(.hierarchical)
-
-                Toggle("Auto-Select Schedule Day", systemImage: "scroll", isOn: $autoSelectScheduleDay)
+                Toggle(isOn: $hapticFeedback) {
+                    Label {
+                        Text("Haptic Feedback")
+                    } icon: {
+                        Image(systemName: "hand.rays.fill")
+                            .resizable()
+                            .scaledToFit()
+                            .symbolRenderingMode(.palette)
+                            .foregroundStyle(colorScheme == .dark ? .white : .black, .blue)
+                    }
+                    .labelStyle(CenterLabelStyle())
+                }
+                
+                Toggle(isOn: $autoSelectScheduleDay) {
+                    Label {
+                        Text("Auto-Select Schedule Day")
+                    } icon: {
+                        Image(systemName: "calendar.badge.checkmark")
+                            .resizable()
+                            .scaledToFit()
+                            .symbolRenderingMode(.palette)
+                            .foregroundStyle(.blue, colorScheme == .dark ? .white : .black)
+                    }
+                    .labelStyle(CenterLabelStyle())
+                }
             }
 
             Section {
