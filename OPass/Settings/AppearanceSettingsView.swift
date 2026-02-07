@@ -19,7 +19,7 @@ struct AppearanceSettingsView: View {
         Form {
             darkModePicker()
 
-            Section("SCHEDULE") {
+            Section("Schedule") {
                 ScheduleOptions()
             }
 

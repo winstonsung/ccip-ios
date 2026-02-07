@@ -78,14 +78,8 @@
       },
       "shouldTranslate" : false
     },
-    "ABOUT" : {
+    "About" : {
       "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "ABOUT"
-          }
-        },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
@@ -900,28 +894,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "General"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "一般"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "一般"
-          }
-        }
-      }
-    },
-    "GENERAL" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "GENERAL"
           }
         },
         "ja" : {
@@ -1785,14 +1757,8 @@
         }
       }
     },
-    "SCHEDULE" : {
+    "Schedule" : {
       "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "SCHEDULE"
-          }
-        },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
