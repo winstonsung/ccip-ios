@@ -1,0 +1,546 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "session_view_broadcast_section_broadcast_caption" : {
+      "comment" : "The caption for broadcast sections on the Session View.",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Broadcast"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "配信"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "轉播"
+          }
+        }
+      }
+    },
+    "session_view_description_section_header" : {
+      "comment" : "The header for description section on the Session View.",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Session Introduction"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "セッション紹介"
+          }
+        },
+        "nan" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "議程簡介"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "議程簡介"
+          }
+        }
+      }
+    },
+    "session_view_description_section_translate_button" : {
+      "comment" : "The translate button for description section on the Session View.",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Translate"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "翻訳する"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "翻譯"
+          }
+        }
+      }
+    },
+    "session_view_feature_buttons_feature_type_cowriting" : {
+      "comment" : "The feature button text of co-writing feature type on the Session View.",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Co-Writing"
+          }
+        }
+      }
+    },
+    "session_view_feature_buttons_feature_type_live" : {
+      "comment" : "The feature button text of live feature type on the Session View.",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Live"
+          }
+        }
+      }
+    },
+    "session_view_feature_buttons_feature_type_q_and_a" : {
+      "comment" : "The feature button text of Q&A feature type on the Session View.",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Q&A"
+          }
+        }
+      }
+    },
+    "session_view_feature_buttons_feature_type_record" : {
+      "comment" : "The feature button text of record feature type on the Session View.",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Record"
+          }
+        }
+      }
+    },
+    "session_view_feature_buttons_feature_type_slide" : {
+      "comment" : "The feature button text of slide feature type on the Session View.",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Slide"
+          }
+        }
+      }
+    },
+    "session_view_place_section_place_caption" : {
+      "comment" : "The caption for place sections on the Session View.",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Place"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "場所"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "地點"
+          }
+        }
+      }
+    },
+    "session_view_speaker_bio_more_button" : {
+      "comment" : "The more button for speaker bio on the Session View.",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "More"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "もっと見る"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "更多"
+          }
+        }
+      }
+    },
+    "session_view_speaker_section_speakers_header" : {
+      "comment" : "The header for speaker(s) sections on the Session View.",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Speakers"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "スピーカー"
+          }
+        },
+        "nan" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "講者"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "講者"
+          }
+        }
+      }
+    },
+    "session_view_time_section_time_and_duration" : {
+      "comment" : "The time and duration for time sections on the Session View. Parameters: 1 - start hour; 2 - start minute; 3 - end hour; 4 - end minute; 5 - duration (unit: minute).",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$02d:%2$02d ~ %3$02d:%4$02d • %5$d minutes"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$02d:%2$02d ~ %3$02d:%4$02d • %5$d分"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$02d:%2$02d ~ %3$02d:%4$02d • %5$d分鐘"
+          }
+        }
+      }
+    },
+    "session_view_toolbar_item_add_to_calendar_alert_action_cancel" : {
+      "comment" : "The cancel access request button label for calendar access request when clicking the \"Add to Calendar\" button on the Session View.",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Cancel"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "キャンセル"
+          }
+        },
+        "nan" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "取消"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "取消"
+          }
+        }
+      }
+    },
+    "session_view_toolbar_item_add_to_calendar_alert_action_settngs" : {
+      "comment" : "The go to settings button label for calendar access request when clicking the \"Add to Calendar\" button on the Session View.",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Settings"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "設定"
+          }
+        },
+        "nan" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "設定"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "設定"
+          }
+        }
+      }
+    },
+    "session_view_toolbar_item_add_to_calendar_alert_text" : {
+      "comment" : "The alert text for calendar access request when clicking the \"Add to Calendar\" button in the toolbar on the Session View.",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Please allow OPass to access your calendar under OPass in your device's settings."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "デバイスの設定でOPassがカレンダーにアクセスすることを許可してください"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "請允許 OPass 在您裝置設定中的 OPass 下存取您的行事曆"
+          }
+        }
+      }
+    },
+    "session_view_toolbar_item_add_to_calendar_text" : {
+      "comment" : "The button text for the \"Add to Calendar\" item in the toolbar on the Session View.",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Add to Calendar"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "カレンダーに追加"
+          }
+        },
+        "nan" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "加入行事曆"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "加入行事曆"
+          }
+        }
+      }
+    },
+    "session_view_toolbar_item_get_notified_alert_action_cancel" : {
+      "comment" : "The cancel button text for the \"Get notified\" alert on the Session View.",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Cancel"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "キャンセル"
+          }
+        },
+        "nan" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "取消"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "取消"
+          }
+        }
+      }
+    },
+    "session_view_toolbar_item_get_notified_alert_action_dont_ask_again" : {
+      "comment" : "The don't ask again button text for the \"Get notified\" alert on the Session View.",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Don't Ask Again"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "今後表示しない"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "不再詢問"
+          }
+        }
+      }
+    },
+    "session_view_toolbar_item_get_notified_alert_action_settings" : {
+      "comment" : "The go to settings button text for the \"Get notified\" alert on the Session View.",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Settings"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "設定"
+          }
+        },
+        "nan" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "設定"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "設定"
+          }
+        }
+      }
+    },
+    "session_view_toolbar_item_get_notified_alert_label" : {
+      "comment" : "The alert label for the \"Get notified\" alert on the Session View.",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Get notified"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "通知を受け取る"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "取得通知"
+          }
+        }
+      }
+    },
+    "session_view_toolbar_item_get_notified_alert_message" : {
+      "comment" : "The alert message for the \"Get notified\" alert on the Session View.",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "OPass can send you notification just before the session starts.\\nWould you like to allow OPass notifications in Settings?"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "OPassはセッション開始直前に通知を送信できます。\\n設定でOPassの通知を許可しますか？"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "OPass 可以在議程開始前向您發送通知。\\n您想在「設定」中允許 OPass 通知嗎？"
+          }
+        }
+      }
+    },
+    "session_view_toolbar_item_share_text" : {
+      "comment" : "The button text for the \"Share\" item in the toolbar on the Session View.",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Share"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "共有"
+          }
+        },
+        "nan" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "分享"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "分享"
+          }
+        }
+      }
+    },
+    "session_view_type_section_type_caption" : {
+      "comment" : "The caption for type sections on the Session View.",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Type"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "タイプ"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "類型"
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}

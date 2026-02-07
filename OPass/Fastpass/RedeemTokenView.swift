@@ -33,7 +33,14 @@ struct RedeemTokenView: View {
                 Button { self.isCameraSOCPresented = true } label: {
                     Label {
                         HStack {
-                            Text("Scan QR code with camera")
+                            Text(
+                                String(
+                                    localized: "redeem_token_view_camera_scan_button",
+                                    defaultValue: "Scan QR code with camera",
+                                    table: "RedeemTokenView",
+                                    comment: ""
+                                )
+                            )
                                 .foregroundStyle(colorScheme == .dark ? .white : .black)
                             Spacer()
                             Image(systemName: "chevron.right")
@@ -67,7 +74,14 @@ struct RedeemTokenView: View {
                 PhotosPicker(selection: $selectedPhotoItem, matching: .any(of: [.images, .not(.livePhotos)])) {
                     Label {
                         HStack {
-                            Text("Select a picture to scan QR code")
+                            Text(
+                                String(
+                                    localized: "redeem_token_view_photos_picker_scan_button",
+                                    defaultValue: "Select a picture to scan QR code",
+                                    table: "RedeemTokenView",
+                                    comment: ""
+                                )
+                            )
                                 .foregroundStyle(colorScheme == .dark ? .white : .black)
                             Spacer()
                             Image(systemName: "chevron.right")
@@ -96,12 +110,27 @@ struct RedeemTokenView: View {
                         }
                     }
                 }
-                .alert("No QR code found in picture", isPresented: $isNoQRCodeAlertPresented)
+                .alert(
+                    String(
+                        localized: "redeem_token_view_photos_picker_scan_alert_no_qr_code_found",
+                        defaultValue: "No QR code found in picture",
+                        table: "RedeemTokenView",
+                        comment: ""
+                    ),
+                    isPresented: $isNoQRCodeAlertPresented
+                )
 
                 Button { self.isManuallySOCPresented = true } label: {
                     Label {
                         HStack {
-                            Text("Enter token manually")
+                            Text(
+                                String(
+                                    localized: "redeem_token_view_enter_token_manually_button",
+                                    defaultValue: "Enter token manually",
+                                    table: "RedeemTokenView",
+                                    comment: ""
+                                )
+                            )
                                 .foregroundStyle(colorScheme == .dark ? .white : .black)
                             Spacer()
                             Image(systemName: "chevron.right")
@@ -133,12 +162,49 @@ struct RedeemTokenView: View {
             }
         }
         .contentMargins(.top, 10)
-        .http403Alert(title: "Couldn't verify your identity", isPresented: $isHttp403AlertPresented)
-        .alert("Couldn't verify your identity", message: "Invaild token", isPresented: $isInvaildTokenAlertPresented)
+        .http403Alert(
+            title: String(
+                localized: "redeem_token_view_alert_http_403_title",
+                defaultValue: "Couldn't verify your identity",
+                table: "RedeemTokenView",
+                comment: ""
+            ),
+            isPresented: $isHttp403AlertPresented
+        )
+        .alert(
+            String(
+                localized: "redeem_token_view_alert_invalid_token_title",
+                defaultValue: "Couldn't verify your identity",
+                table: "RedeemTokenView",
+                comment: ""
+            ),
+            message: String(
+                localized: "redeem_token_view_alert_invalid_token_message",
+                defaultValue: "Invaild token",
+                table: "RedeemTokenView",
+                comment: ""
+            ),
+            isPresented: $isInvaildTokenAlertPresented
+        )
         .slideOverCard(isPresented: $isCameraSOCPresented, backgroundColor: (colorScheme == .dark ? .init(red: 28/255, green: 28/255, blue: 30/255) : .white)) {
             VStack {
-                Text("Fast Pass").font(Font.largeTitle.weight(.bold))
-                Text("Scan QR code with camera")
+                Text(
+                    String(
+                        localized: "redeem_token_view_camera_scan_title",
+                        defaultValue: "Fast Pass",
+                        table: "RedeemTokenView",
+                        comment: ""
+                    )
+                )
+                .font(Font.largeTitle.weight(.bold))
+                Text(
+                    String(
+                        localized: "redeem_token_view_camera_scan_label",
+                        defaultValue: "Scan QR code with camera",
+                        table: "RedeemTokenView",
+                        comment: ""
+                    )
+                )
 
                 CodeScannerView(codeTypes: [.qr], scanMode: .once, showViewfinder: false, shouldVibrateOnSuccess: true, completion: handleScan)
                     .frame(height: UIScreen.main.bounds.height * 0.25)
@@ -148,14 +214,28 @@ struct RedeemTokenView: View {
                             VStack {
                                 Spacer()
                                 Spacer()
-                                Text("Please allow OPass to access your camera under OPass in your device's settings.")
+                                Text(
+                                    String(
+                                        localized: "redeem_token_view_camera_scan_action_request_camera_access_description",
+                                        defaultValue: "Please allow OPass to access your camera under OPass in your device's settings.",
+                                        table: "RedeemTokenView",
+                                        comment: ""
+                                    )
+                                )
                                     .foregroundColor(.white)
                                     .multilineTextAlignment(.center)
                                 Spacer()
                                 Button {
                                     Constants.openInOS(forURL: URL(string: UIApplication.openSettingsURLString)!)
                                 } label: {
-                                    Text("Open Settings")
+                                    Text(
+                                        String(
+                                            localized: "redeem_token_view_camera_scan_action_request_camera_access_action_settings",
+                                            defaultValue: "Open Settings",
+                                            table: "RedeemTokenView",
+                                            comment: ""
+                                        )
+                                    )
                                         .foregroundColor(.blue)
                                         .bold()
                                 }
@@ -167,8 +247,22 @@ struct RedeemTokenView: View {
                     }
 
                 VStack(alignment: .leading) {
-                    Text("Scan to get token").bold()
-                    Text("Please look for the QR code provided by the email and place it in the viewfinder")
+                    Text(
+                        String(
+                            localized: "redeem_token_view_camera_scan_action_scan_label",
+                            defaultValue: "Scan to get token",
+                            table: "RedeemTokenView",
+                            comment: ""
+                        )
+                    ).bold()
+                    Text(
+                        String(
+                            localized: "redeem_token_view_camera_scan_action_scan_description",
+                            defaultValue: "Please look for the QR code provided by the email and place it in the viewfinder",
+                            table: "RedeemTokenView",
+                            comment: ""
+                        )
+                    )
                         .foregroundColor(Color.gray)
                 }
             }
@@ -179,10 +273,33 @@ struct RedeemTokenView: View {
             backgroundColor: (colorScheme == .dark ? .init(red: 28/255, green: 28/255, blue: 30/255) : .white)
         ) {
             VStack {
-                Text("Fast Pass").font(Font.largeTitle.weight(.bold))
-                Text("Enter token manually")
+                Text(
+                    String(
+                        localized: "redeem_token_view_enter_token_manually_title",
+                        defaultValue: "Fast Pass",
+                        table: "RedeemTokenView",
+                        comment: ""
+                    )
+                )
+                .font(Font.largeTitle.weight(.bold))
+                Text(
+                    String(
+                        localized: "redeem_token_view_enter_token_manually_label",
+                        defaultValue: "Enter token manually",
+                        table: "RedeemTokenView",
+                        comment: ""
+                    )
+                )
 
-                TextField("Token", text: $token)
+                TextField(
+                    String(
+                        localized: "redeem_token_view_enter_token_manually_field_token_label",
+                        defaultValue: "Token",
+                        table: "RedeemTokenView",
+                        comment: ""
+                    ),
+                    text: $token
+                )
                     .focused($focusedField, equals: .ManuallyToken)
                     .padding(10)
                     .overlay(
@@ -193,7 +310,14 @@ struct RedeemTokenView: View {
                     )
 
                 VStack(alignment: .leading) {
-                    Text("Please look for the token provided by the email and enter it in the field above")
+                    Text(
+                        String(
+                            localized: "redeem_token_view_enter_token_manually_field_token_description",
+                            defaultValue: "Please look for the token provided by the email and enter it in the field above",
+                            table: "RedeemTokenView",
+                            comment: ""
+                        )
+                    )
                         .foregroundColor(Color.gray)
                         .font(.caption)
                 }
@@ -213,7 +337,14 @@ struct RedeemTokenView: View {
                 }) {
                     HStack {
                         Spacer()
-                        Text("Continue")
+                        Text(
+                            String(
+                                localized: "redeem_token_view_enter_token_manually_continue_button",
+                                defaultValue: "Continue",
+                                table: "RedeemTokenView",
+                                comment: ""
+                            )
+                        )
                             .padding(.vertical, 20)
                             .foregroundColor(Color.white)
                         Spacer()

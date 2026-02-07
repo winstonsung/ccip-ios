@@ -32,7 +32,14 @@ struct FastPassView: View {
                                 } catch {}
                             }
                     } else {
-                        ProgressView("Loading")
+                        ProgressView(
+                            String(
+                                localized: "fast_pass_view_status_loading",
+                                defaultValue: "Loading",
+                                table: "FastPassView",
+                                comment: "The loading status text on Fast Pass View"
+                            )
+                        )
                             .task {
                                 do { try await EventStore.loadAttendee() } catch APIManager
                                     .LoadError.forbidden
@@ -45,21 +52,56 @@ struct FastPassView: View {
                     ContentUnavailableView {
                         switch errorType! {
                         case "http403":
-                            Label("Network Error", systemImage: "wifi.exclamationmark")
+                            Label(
+                                String(
+                                    localized: "fast_pass_view_error_network_label",
+                                    defaultValue: "Network Error",
+                                    table: "FastPassView",
+                                    comment: "The error label of network error (didn't connect to event-provided Wi-Fi) on the Fast Pass View."
+                                ),
+                                systemImage: "wifi.exclamationmark"
+                            )
                         default:
                             Label(
-                                "Something Went Wrong", systemImage: "exclamationmark.triangle.fill"
+                                String(
+                                    localized: "fast_pass_view_error_default_label",
+                                    defaultValue: "Something Went Wrong",
+                                    table: "FastPassView",
+                                    comment: "The default error label (network status error or wrong event) on the Fast Pass View."
+                                ),
+                                systemImage: "exclamationmark.triangle.fill"
                             )
                         }
                     } description: {
                         switch errorType! {
                         case "http403":
-                            Text("Please connect to the Wi-Fi provided by event")
+                            Text(
+                                String(
+                                    localized: "fast_pass_view_error_network_description",
+                                    defaultValue: "Please connect to the Wi-Fi provided by event",
+                                    table: "FastPassView",
+                                    comment: "The error description of network error (didn't connect to event-provided Wi-Fi) on the Fast Pass View."
+                                )
+                            )
                         default:
-                            Text("Check your network status or select a new event.")
+                            Text(
+                                String(
+                                    localized: "fast_pass_view_error_default_description",
+                                    defaultValue: "Check your network status or select a new event.",
+                                    table: "FastPassView",
+                                    comment: "The default error description (network status error or wrong event) on the Fast Pass View."
+                                )
+                            )
                         }
                     } actions: {
-                        Button("Try Again") {
+                        Button(
+                            String(
+                                localized: "fast_pass_view_action_try_again_button",
+                                defaultValue: "Try Again",
+                                table: "FastPassView",
+                                comment: "The try again action button on the Fast Pass View."
+                            )
+                        ) {
                             self.errorType = nil
                         }
                         .buttonStyle(.borderedProminent)

@@ -39,7 +39,12 @@ struct ScenarioView: View {
                                                                         and: scenario.expire, orEqual: false,
                                                                         granularity: .second) {
                                         disableAlertString = String(
-                                            format: String(localized: "Only available at\n%d/%d/%d %d:%02d ~ %d/%d/%d %d:%02d"),
+                                            format: String(
+                                                localized: "scenario_view_",
+                                                defaultValue: "Only available at\n%d/%d/%d %d:%02d ~ %d/%d/%d %d:%02d",
+                                                table: "ScenarioView",
+                                                comment: ""
+                                            ),
                                             scenario.available.year, scenario.available.month,
                                             scenario.available.day, scenario.available.hour,
                                             scenario.available.minute, scenario.expire.year,
@@ -59,18 +64,68 @@ struct ScenarioView: View {
         .toolbar {
             ToolbarItem(placement: .navigationBarTrailing) {
                 Button { isSignOutAlertPresented.toggle() } label: {
-                    Text("Sign Out").foregroundColor(.red)
+                    Text(
+                        String(
+                            localized: "scenario_view_",
+                            defaultValue: "Sign Out",
+                            table: "ScenarioView",
+                            comment: ""
+                        )
+                    )
+                    .foregroundColor(.red)
                 }
             }
         }
-        .alert("Not available", isPresented: $isDisableAlertPresented, actions: {
-            Button(String(localized: "Cancel"), role: .cancel) { }
-        }, message: { Text(disableAlertString) })
-        .alert("Are you sure you want to sign out?", isPresented: $isSignOutAlertPresented) {
-            Button(String(localized: "Sign Out"), role: .destructive) {
+        .alert(
+            String(
+                localized: "scenario_view_",
+                defaultValue: "Not available",
+                table: "ScenarioView",
+                comment: ""
+            ),
+            isPresented: $isDisableAlertPresented,
+            actions: {
+                Button(
+                    String(
+                        localized: "scenario_view_",
+                        defaultValue: "Cancel",
+                        table: "ScenarioView",
+                        comment: ""
+                    ),
+                    role: .cancel
+                ) { }
+            },
+            message: { Text(disableAlertString) }
+        )
+        .alert(
+            String(
+                localized: "scenario_view_",
+                defaultValue: "Are you sure you want to sign out?",
+                table: "ScenarioView",
+                comment: ""
+            ),
+            isPresented: $isSignOutAlertPresented
+        ) {
+            Button(
+                String(
+                    localized: "scenario_view_",
+                    defaultValue: "Sign Out",
+                    table: "ScenarioView",
+                    comment: ""
+                ),
+                role: .destructive
+            ) {
                 EventStore.signOut()
             }
-            Button(String(localized: "Cancel"), role: .cancel) { }
+            Button(
+                String(
+                    localized: "scenario_view_",
+                    defaultValue: "Cancel",
+                    table: "ScenarioView",
+                    comment: ""
+                ),
+                role: .cancel
+            ) { }
         }
         .sheet(item: $sheetScenarioDataItem) { scenario in
             UseScenarioView(
@@ -104,7 +159,12 @@ struct ScenarioView: View {
                     ? scenario.used == nil
                     ? sectionID.contains("•")
                     ? String(
-                        format: "%d:%02d ~ %d:%02d",
+                        format: String(
+                            localized: "scenario_view_",
+                            defaultValue: "%d:%02d ~ %d:%02d",
+                            table: "ScenarioView",
+                            comment: ""
+                        ),
                         scenario.available.hour,
                         scenario.available.minute,
                         scenario.expire.hour,
@@ -112,7 +172,12 @@ struct ScenarioView: View {
                     )
                     : scenario.available.month == scenario.expire.month && scenario.available.day == scenario.expire.day
                     ? String(
-                        format: "%d/%d • %d:%02d ~ %d:%02d",
+                        format: String(
+                            localized: "scenario_view_",
+                            defaultValue: "%d/%d • %d:%02d ~ %d:%02d",
+                            table: "ScenarioView",
+                            comment: ""
+                        ),
                         scenario.available.month,
                         scenario.available.day,
                         scenario.available.hour,
@@ -121,7 +186,12 @@ struct ScenarioView: View {
                         scenario.expire.minute
                     )
                     : String(
-                        format: "%d/%d • %d:%02d ~ %d/%d • %d:%02d",
+                        format: String(
+                            localized: "scenario_view_",
+                            defaultValue: "%d/%d • %d:%02d ~ %d/%d • %d:%02d",
+                            table: "ScenarioView",
+                            comment: ""
+                        ),
                         scenario.available.month,
                         scenario.available.day,
                         scenario.available.hour,
@@ -132,7 +202,12 @@ struct ScenarioView: View {
                         scenario.expire.minute
                     )
                     : String(
-                        format: String(localized: "Check at %d:%02d"),
+                        format: String(
+                            localized: "scenario_view_",
+                            defaultValue: "Check at %d:%02d",
+                            table: "ScenarioView",
+                            comment: ""
+                        ),
                         scenario.used!.hour,
                         scenario.used!.minute
                     )

@@ -42,7 +42,14 @@ struct WiFiView: View {
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
-                    Button(LocalizedStringKey("Close")) {
+                    Button(
+                        String(
+                            localized: "wifi_view_toolbar_item_close_button",
+                            defaultValue: "Close",
+                            table: "WiFiView",
+                            comment: "The close button label on the Wi-Fi View."
+                        )
+                    ) {
                         dismiss()
                     }
                 }

@@ -3,7 +3,11 @@ on:
   push:
     branches: [develop]
     paths:
-      - 'Supporting Files/Localizable.xcstrings'
+      - 'Supporting Files/Localizables/EventStore.xcstrings'
+      - 'Supporting Files/Localizables/FastPassView.xcstrings'
+      - 'Supporting Files/Localizables/Localizable.xcstrings'
+      - 'Supporting Files/Localizables/SessionView.xcstrings'
+      - 'Supporting Files/Localizables/WiFiView.xcstrings'
   workflow_dispatch:
 
 concurrency:
@@ -57,7 +61,7 @@ jobs:
           fi
 
           for file in "${files[@]}"; do
-            perl -i -0777 -pe 's/<file original=".*<file original="Supporting Files\/Localizable\.xcstrings"/<file original="Supporting Files\/Localizable.xcstrings"/sg' "$file"
+            perl -i -0777 -pe 's/<file original=".*<file original="Supporting Files\/Localizables\/EventStore\.xcstrings"/<file original="Supporting Files\/Localizables\/EventStore.xcstrings"/sg' "$file"
           done
 
           tmp=".xliff_tmp"

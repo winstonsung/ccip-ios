@@ -1,0 +1,30 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "event_notification_body" : {
+      "comment" : "The event notification body. Parameters: 1 - session title; 2 - location.",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "\"%1$@\" in room \"%2$@\", please keep your time of buffer to reach the room."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "「%1$@」が会場「%2$@」で行われます。時間に余裕をもって会場へお越しください。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "「%1$@」在會議室「%2$@」，請儘速前往！"
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}

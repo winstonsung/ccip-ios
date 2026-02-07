@@ -52,7 +52,24 @@ struct TicketView: View {
                         }
                         .listRowBackground(Color.clear)
 
-                        Section(header: Text("Token"), footer: Text("Please keep your ticket as a secret. Do not share it with anyone else but the staff or event booths.")) {
+                        Section(
+                            header: Text(
+                                String(
+                                    localized: "ticket_view_",
+                                    defaultValue: "Token",
+                                    table: "TicketView",
+                                    comment: ""
+                                )
+                            ),
+                            footer: Text(
+                                String(
+                                    localized: "ticket_view_",
+                                    defaultValue: "Please keep your ticket as a secret. Do not share it with anyone else but the staff or event booths.",
+                                    table: "TicketView",
+                                    comment: ""
+                                )
+                            )
+                        ) {
                             HStack {
                                 isTokenVisible
                                 ? Text(token)
@@ -66,7 +83,15 @@ struct TicketView: View {
                             Button {
                                 UIPasteboard.general.string = token
                             } label: {
-                                Label("Copy Token", systemImage: "square.on.square")
+                                Label(
+                                    String(
+                                        localized: "ticket_view_",
+                                        defaultValue: "Copy Token",
+                                        table: "TicketView",
+                                        comment: ""
+                                    ),
+                                    systemImage: "square.on.square"
+                                )
                             }
                         }
                     }
@@ -80,7 +105,15 @@ struct TicketView: View {
                         }
                     }
 
-                    Toggle("Auto-Brighten", isOn: $autoAdjustTicketBirghtness)
+                    Toggle(
+                        String(
+                            localized: "ticket_view_",
+                            defaultValue: "Auto-Brighten",
+                            table: "TicketView",
+                            comment: ""
+                        ),
+                        isOn: $autoAdjustTicketBirghtness
+                    )
                         .onChange(of: autoAdjustTicketBirghtness) {
                             if autoAdjustTicketBirghtness {
                                 self.defaultBrightness = UIScreen.main.brightness
@@ -103,7 +136,17 @@ struct TicketView: View {
                         if EventStore.token != nil {
                             Button(action: {
                                 isSignOutAlertPresented.toggle()
-                            }) { Text(LocalizedStringKey("Sign Out")).foregroundColor(.red) }
+                            }) {
+                                Text(
+                                    String(
+                                        localized: "ticket_view_",
+                                        defaultValue: "Sign Out",
+                                        table: "TicketView",
+                                        comment: ""
+                                    )
+                                )
+                                    .foregroundColor(.red)
+                            }
                         }
                     }
                 }
@@ -115,11 +158,34 @@ struct TicketView: View {
         }
 
 
-        .alert("Are you sure you want to sign out?", isPresented: $isSignOutAlertPresented) {
-            Button("Sign Out", role: .destructive) {
+        .alert(
+            String(
+                localized: "ticket_view_",
+                defaultValue: "Are you sure you want to sign out?",
+                table: "TicketView",
+                comment: ""
+            ),
+            isPresented: $isSignOutAlertPresented) {
+            Button(
+                String(
+                    localized: "ticket_view_",
+                    defaultValue: "Sign Out",
+                    table: "TicketView",
+                    comment: ""
+                ),
+                role: .destructive
+            ) {
                 self.EventStore.signOut()
             }
-            Button("Cancel", role: .cancel) { }
+            Button(
+                String(
+                    localized: "ticket_view_",
+                    defaultValue: "Cancel",
+                    table: "TicketView",
+                    comment: ""
+                ),
+                role: .cancel
+            ) { }
         }
     }
 

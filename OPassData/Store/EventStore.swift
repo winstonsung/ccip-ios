@@ -295,9 +295,15 @@ extension EventStore {
             let content = UNMutableNotificationContent()
             content.title = String(localized: "Session will start in 5 mins.")
             content.body = String(
-                format: String(localized: "\"%@\" in room \"%@\", please keep your time of buffer to reach the room."),
+                format: String(
+                    localized: "event_notification_body",
+                    defaultValue: "\"%1$@\" in room \"%2$@\", please keep your time of buffer to reach the room.",
+                    table: "EventStore",
+                    comment: "The event notification body. Parameters: 1 - session title; 2 - location."
+                ),
                 session.localized().title,
-                schedule?.rooms[session.room]?.localized().name ?? "")
+                schedule?.rooms[session.room]?.localized().name ?? ""
+            )
             content.sound = .default
             let date = (session.start - 5.minutes).dateComponents
             let trigger = UNCalendarNotificationTrigger(dateMatching: date, repeats: false)

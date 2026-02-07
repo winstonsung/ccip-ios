@@ -119,15 +119,53 @@ struct SessionView: View {
                             self.event.likedSessions.append(session.id)
                         }
                     }
-                    .alert("Get notified", isPresented: $presentNotifiedAlert) {
-                        Button("Settings") {
+                    .alert(
+                        String(
+                            localized: "session_view_toolbar_item_get_notified_alert_label",
+                            defaultValue: "Get notified",
+                            table: "SessionView",
+                            comment: "The alert label for the \"Get notified\" alert on the Session View."
+                        ),
+                        isPresented: $presentNotifiedAlert
+                    ) {
+                        Button(
+                            String(
+                                localized: "session_view_toolbar_item_get_notified_alert_action_settings",
+                                defaultValue: "Settings",
+                                table: "SessionView",
+                                comment: "The go to settings button text for the \"Get notified\" alert on the Session View."
+                            )
+                        ) {
                             Constants.openInOS(forURL: URL(string: UIApplication.openSettingsURLString)!)
                             pendNotified = true
                         }
-                        Button("Don't Ask Again", role: .destructive) { notifiedAlert = false }
-                        Button("Cancel", role: .cancel) {}
+                        Button(
+                            String(
+                                localized: "session_view_toolbar_item_get_notified_alert_action_dont_ask_again",
+                                defaultValue: "Don't Ask Again",
+                                table: "SessionView",
+                                comment: "The don't ask again button text for the \"Get notified\" alert on the Session View."
+                            ),
+                            role: .destructive
+                        ) { notifiedAlert = false }
+                        Button(
+                            String(
+                                localized: "session_view_toolbar_item_get_notified_alert_action_cancel",
+                                defaultValue: "Cancel",
+                                table: "SessionView",
+                                comment: "The cancel button text for the \"Get notified\" alert on the Session View."
+                            ),
+                            role: .cancel
+                        ) {}
                     } message: {
-                        Text("OPass can send you notification just before the session starts.\\nWould you like to allow OPass notifications in Settings?")
+                        Text(
+                            String(
+                                localized: "session_view_toolbar_item_get_notified_alert_message",
+                                defaultValue: "OPass can send you notification just before the session starts.\\nWould you like to allow OPass notifications in Settings?",
+                                table: "SessionView",
+                                comment: "The alert message for the \"Get notified\" alert on the Session View."
+                            )
+                        )
                     }
                     .onChange(of: scenePhase) {
                         switch scenePhase {
@@ -148,7 +186,15 @@ struct SessionView: View {
                                 }
                             }
                         } label: {
-                            Label("Add to Calendar", systemImage: "calendar.badge.plus")
+                            Label(
+                                String(
+                                    localized: "session_view_toolbar_item_add_to_calendar_text",
+                                    defaultValue: "Add to Calendar",
+                                    table: "SessionView",
+                                    comment: "The button text for the \"Add to Calendar\" item in the toolbar on the Session View."
+                                ),
+                                systemImage: "calendar.badge.plus"
+                            )
                         }
 
                         if let uri = self.session.uri, let url = URL(string: uri) {
@@ -156,15 +202,47 @@ struct SessionView: View {
                                 let av = UIActivityViewController(activityItems: [url], applicationActivities: nil)
                                 UIApplication.topViewController()?.present(av, animated: true)
                             } label: {
-                                Label("Share", systemImage: "square.and.arrow.up")
+                                Label(
+                                    String(
+                                        localized: "session_view_toolbar_item_share_text",
+                                        defaultValue: "Share",
+                                        table: "SessionView",
+                                        comment: "The button text for the \"Share\" item in the toolbar on the Session View."
+                                    ),
+                                    systemImage: "square.and.arrow.up"
+                                )
                             }
                         }
                     } label: {
                         Image(systemName: "ellipsis.circle")
                     }
-                    .alert("Please allow OPass to access your calendar under OPass in your device's settings.", isPresented: $isCalendarAlertPresented) {
-                        Button("Cancel", role: .cancel, action: {})
-                        Button("Settings") {
+                    .alert(
+                        String(
+                            localized: "session_view_toolbar_item_add_to_calendar_alert_text",
+                            defaultValue: "Please allow OPass to access your calendar under OPass in your device's settings.",
+                            table: "SessionView",
+                            comment: "The alert text for calendar access request when clicking the \"Add to Calendar\" button in the toolbar on the Session View."
+                        ),
+                        isPresented: $isCalendarAlertPresented
+                    ) {
+                        Button(
+                            String(
+                                localized: "session_view_toolbar_item_add_to_calendar_alert_action_cancel",
+                                defaultValue: "Cancel",
+                                table: "SessionView",
+                                comment: "The cancel access request button label for calendar access request when clicking the \"Add to Calendar\" button on the Session View."
+                            ),
+                            role: .cancel,
+                            action: {}
+                        )
+                        Button(
+                            String(
+                                localized: "session_view_toolbar_item_add_to_calendar_alert_action_settngs",
+                                defaultValue: "Settings",
+                                table: "SessionView",
+                                comment: "The go to settings button label for calendar access request when clicking the \"Add to Calendar\" button on the Session View."
+                            )
+                        ) {
                             Constants.openInOS(forURL: URL(string: UIApplication.openSettingsURLString)!)
                         }
                     }
@@ -233,11 +311,56 @@ private struct FeatureButtons: View {
 
     init(session: Session) {
         features = [
-            (session.live, "video", "Live"),
-            (session.co_write, "keyboard", "CoWriting"),
-            (session.record, "play", "Record"),
-            (session.slide, "paperclip", "Slide"),
-            (session.qa, "questionmark", "QA")
+            (
+                session.live,
+                "video",
+                String(
+                    localized: "session_view_feature_buttons_feature_type_live",
+                    defaultValue: "Live",
+                    table: "SessionView",
+                    comment: "The feature button text of live feature type on the Session View."
+                )
+            ),
+            (
+                session.co_write,
+                "keyboard",
+                String(
+                    localized: "session_view_feature_buttons_feature_type_cowriting",
+                    defaultValue: "Co-Writing",
+                    table: "SessionView",
+                    comment: "The feature button text of co-writing feature type on the Session View."
+                )
+            ),
+            (
+                session.record,
+                "play",
+                String(
+                    localized: "session_view_feature_buttons_feature_type_record",
+                    defaultValue: "Record",
+                    table: "SessionView",
+                    comment: "The feature button text of record feature type on the Session View."
+                )
+            ),
+            (
+                session.slide,
+                "paperclip",
+                String(
+                    localized: "session_view_feature_buttons_feature_type_slide",
+                    defaultValue: "Slide",
+                    table: "SessionView",
+                    comment: "The feature button text of slide feature type on the Session View."
+                )
+            ),
+            (
+                session.qa,
+                "questionmark",
+                String(
+                    localized: "session_view_feature_buttons_feature_type_q_and_a",
+                    defaultValue: "Q&A",
+                    table: "SessionView",
+                    comment: "The feature button text of Q&A feature type on the Session View."
+                )
+            )
         ].filter { (url, _, _) in url != nil } as! [(String, String, String)]
     }
 
@@ -275,7 +398,7 @@ private struct FeatureButtons: View {
                                     .background(.sectionBackground)
                                     .cornerRadius(10)
                             }
-                            Text(LocalizedStringKey(text))
+                            Text(text)
                                 .font(.caption2)
                                 .multilineTextAlignment(.center)
                         }
@@ -297,14 +420,25 @@ private struct TypeSection: View {
                 .foregroundColor(Color(red: 1, green: 204/255, blue: 0, opacity: 1))
                 .padding()
                 .frame(width: 50, height: 50)
+
             VStack(alignment: .leading, spacing: 0) {
-                Text(LocalizedStringKey("Type")).font(.caption)
+                Text(
+                    String(
+                        localized: "session_view_type_section_type_caption",
+                        defaultValue: "Type",
+                        table: "SessionView",
+                        comment: "The caption for type sections on the Session View."
+                    )
+                )
+                    .font(.caption)
                     .foregroundColor(.gray)
+
                 Text(name)
                     .fixedSize(horizontal: false, vertical: true)
             }
             .fixedSize(horizontal: false, vertical: true)
             .padding(.vertical, 7)
+
             Spacer()
         }
     }
@@ -321,14 +455,25 @@ private struct PlaceSection: View {
                 .foregroundColor(Color.blue)
                 .padding()
                 .frame(width: 50, height: 50)
+
             VStack(alignment: .leading, spacing: 0) {
-                Text(LocalizedStringKey("Place")).font(.caption)
+                Text(
+                    String(
+                        localized: "session_view_place_section_place_caption",
+                        defaultValue: "Place",
+                        table: "SessionView",
+                        comment: "The caption for place sections on the Session View."
+                    )
+                )
+                    .font(.caption)
                     .foregroundColor(.gray)
+
                 Text(name)
                     .fixedSize(horizontal: false, vertical: true)
             }
             .fixedSize(horizontal: false, vertical: true)
             .padding(.vertical, 7)
+
             Spacer()
         }
     }
@@ -353,14 +498,31 @@ private struct TimeSection: View {
                 .foregroundColor(Color.red)
                 .padding()
                 .frame(width: 50, height: 50)
+
             VStack(alignment: .leading, spacing: 0) {
                 Text(String(format: "%d/%d/%d", start.year, start.month, start.day))
                     .font(.caption)
                     .foregroundColor(.gray)
-                Text(String(format: String(localized: "%d:%02d ~ %d:%02d • %d minutes"), start.hour, start.minute, end.hour, end.minute, durationMinute))
+
+                Text(
+                    String(
+                        format: String(
+                            localized: "session_view_time_section_time_and_duration",
+                            defaultValue: "%1$02d:%2$02d ~ %3$02d:%4$02d • %5$d minutes",
+                            table: "SessionView",
+                            comment: "The time and duration for time sections on the Session View. Parameters: 1 - start hour; 2 - start minute; 3 - end hour; 4 - end minute; 5 - duration (unit: minute)."
+                        ),
+                        start.hour,
+                        start.minute,
+                        end.hour,
+                        end.minute,
+                        durationMinute
+                    )
+                )
             }
             .fixedSize(horizontal: false, vertical: true)
             .padding(.vertical, 7)
+
             Spacer()
         }
     }
@@ -383,14 +545,24 @@ private struct BroadcastSection: View {
                 .foregroundColor(Color.orange)
                 .padding()
                 .frame(width: 50, height: 50)
+
             VStack(alignment: .leading, spacing: 0) {
-                Text(LocalizedStringKey("Broadcast"))
+                Text(
+                    String(
+                        localized: "session_view_broadcast_section_broadcast_caption",
+                        defaultValue: "Broadcast",
+                        table: "SessionView",
+                        comment: "The caption for broadcast sections on the Session View."
+                    )
+                )
                     .font(.caption)
                     .foregroundColor(.gray)
+
                 Text(renderRoomsString())
             }
             .fixedSize(horizontal: false, vertical: true)
             .padding(.vertical, 7)
+
             Spacer()
         }
     }
@@ -415,7 +587,17 @@ private struct SpeakersSections: View {
     @EnvironmentObject var event: EventStore
 
     var body: some View {
-        Section(header: Text(LocalizedStringKey("Speakers")).padding(.leading, 10)) {
+        Section(
+            header: Text(
+                String(
+                    localized: "session_view_speaker_section_speakers_header",
+                    defaultValue: "Speakers",
+                    table: "SessionView",
+                    comment: "The header for speaker(s) sections on the Session View."
+                )
+            )
+                .padding(.leading, 10)
+        ) {
             ForEach(session.speakers, id: \.self) { speaker in
                 SpeakerBlock(
                     speaker: speaker,
@@ -511,7 +693,14 @@ private struct SpeakerBio: View {
             if isTruncated {
                 HStack {
                     Spacer()
-                    Button("More") {
+                    Button(
+                        String(
+                            localized: "session_view_speaker_bio_more_button",
+                            defaultValue: "More",
+                            table: "SessionView",
+                            comment: "The more button for speaker bio on the Session View."
+                        )
+                    ) {
                         SOCManager.present(isPresented: $isShowingSpeakerDetail, style: colorScheme == .dark ? .dark : .light) {
                             VStack {
                                 Group {
@@ -585,7 +774,17 @@ private struct DescriptionSection: View {
     @State private var translationPresented = false
 
     var body: some View {
-        Section(header: Text(LocalizedStringKey("Session Introduction")).padding(.leading, 10)) {
+        Section(
+            header: Text(
+                String(
+                    localized: "session_view_description_section_header",
+                    defaultValue: "Session Introduction",
+                    table: "SessionView",
+                    comment: "The header for description section on the Session View."
+                )
+            )
+                .padding(.leading, 10)
+            ) {
             VStack {
                 Markdown(description, font: .footnote) { url in
                     Constants.openInAppSafari(forURL: url, style: colorScheme)
@@ -594,7 +793,15 @@ private struct DescriptionSection: View {
 
                 if #available(iOS 17.4, *) {
                     Divider()
-                    Button("Translate", systemImage: "translate") {
+                    Button(
+                        String(
+                            localized: "session_view_description_section_translate_button",
+                            defaultValue: "Translate",
+                            table: "SessionView",
+                            comment: "The translate button for description section on the Session View."
+                        ),
+                        systemImage: "translate"
+                    ) {
                         translationPresented.toggle()
                     }
                     .font(.callout)

@@ -1,50 +1,6 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
-    "\"%@\" in room \"%@\", please keep your time of buffer to reach the room." : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "\"%@\" in room \"%@\", please keep your time of buffer to reach the room."
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "「%@」が会場「%@」で行われます。時間に余裕をもって会場へお越しください。"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "「%@」在會議室「%@」，請儘速前往！"
-          }
-        }
-      }
-    },
-    "%d:%02d ~ %d:%02d • %d minutes" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "%d:%02d ~ %d:%02d • %d minutes"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%d:%02d ~ %d:%02d • %d分"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%d:%02d ~ %d:%02d • %d分鐘"
-          }
-        }
-      }
-    },
     "%lld %@" : {
       "localizations" : {
         "en" : {
@@ -90,34 +46,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "關於"
-          }
-        }
-      }
-    },
-    "Add to Calendar" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "Add to Calendar"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "カレンダーに追加"
-          }
-        },
-        "nan" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "加入行事曆"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "加入行事曆"
           }
         }
       }
@@ -206,28 +134,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "自動選擇日程"
-          }
-        }
-      }
-    },
-    "Broadcast" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "Broadcast"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "配信"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "轉播"
           }
         }
       }
@@ -436,28 +342,6 @@
         }
       }
     },
-    "Continue" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "Continue"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "続ける"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "繼續"
-          }
-        }
-      }
-    },
     "Copy Token" : {
       "localizations" : {
         "en" : {
@@ -482,28 +366,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "複製驗證碼"
-          }
-        }
-      }
-    },
-    "Couldn't verify your identity" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "Couldn't verify your identity"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "本人確認ができませんでした"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "無法驗證您的身分"
           }
         }
       }
@@ -574,28 +436,6 @@
         }
       }
     },
-    "Don't Ask Again" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "Don't Ask Again"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "今後表示しない"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "不再詢問"
-          }
-        }
-      }
-    },
     "Done" : {
       "localizations" : {
         "en" : {
@@ -662,28 +502,6 @@
         }
       }
     },
-    "Enter token manually" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "Enter token manually"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "トークンを手動で入力"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "手動輸入驗證碼"
-          }
-        }
-      }
-    },
     "Erase All Filters" : {
       "localizations" : {
         "en" : {
@@ -746,34 +564,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "無法載入活動列表"
-          }
-        }
-      }
-    },
-    "Fast Pass" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "Fast Pass"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "ファストパス"
-          }
-        },
-        "nan" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "快速通關"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "快速通關"
           }
         }
       }
@@ -910,28 +700,6 @@
         }
       }
     },
-    "Get notified" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "Get notified"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "通知を受け取る"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "取得通知"
-          }
-        }
-      }
-    },
     "Haptic Feedback" : {
       "localizations" : {
         "en" : {
@@ -950,28 +718,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "觸覺回饋"
-          }
-        }
-      }
-    },
-    "Invaild token" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "Invaild token"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "無効なトークン"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "無效的驗證碼"
           }
         }
       }
@@ -1075,28 +821,6 @@
         }
       }
     },
-    "More" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "More"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "もっと見る"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "更多"
-          }
-        }
-      }
-    },
     "Network Error" : {
       "localizations" : {
         "en" : {
@@ -1115,28 +839,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "網路錯誤"
-          }
-        }
-      }
-    },
-    "No QR code found in picture" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "No QR code found in picture"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "画像内にQRコードが見つかりません"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "在圖片中找不到QR碼"
           }
         }
       }
@@ -1273,28 +975,6 @@
         }
       }
     },
-    "OPass can send you notification just before the session starts.\\nWould you like to allow OPass notifications in Settings?" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "OPass can send you notification just before the session starts.\\nWould you like to allow OPass notifications in Settings?"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "OPassはセッション開始直前に通知を送信できます。\\n設定でOPassの通知を許可しますか？"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "OPass 可以在議程開始前向您發送通知。\\n您想在「設定」中允許 OPass 通知嗎？"
-          }
-        }
-      }
-    },
     "OPass Room 1" : {
       "localizations" : {
         "en" : {
@@ -1361,28 +1041,6 @@
         }
       }
     },
-    "Open Settings" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "Open Settings"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "設定を開く"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "開啟設定"
-          }
-        }
-      }
-    },
     "Past Session" : {
       "localizations" : {
         "en" : {
@@ -1405,28 +1063,6 @@
         }
       }
     },
-    "Place" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "Place"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "場所"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "地點"
-          }
-        }
-      }
-    },
     "Places" : {
       "localizations" : {
         "en" : {
@@ -1445,50 +1081,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "地點"
-          }
-        }
-      }
-    },
-    "Please allow OPass to access your calendar under OPass in your device's settings." : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "Please allow OPass to access your calendar under OPass in your device's settings."
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "デバイスの設定でOPassがカレンダーにアクセスすることを許可してください"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "請允許 OPass 在您裝置設定中的 OPass 下存取您的行事曆"
-          }
-        }
-      }
-    },
-    "Please allow OPass to access your camera under OPass in your device's settings." : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "Please allow OPass to access your camera under OPass in your device's settings."
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "デバイスの設定でOPassがカメラにアクセスすることを許可してください"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "請允許 OPass 在您裝置設定中的 OPass 下存取您的相機"
           }
         }
       }
@@ -1533,50 +1125,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "請將您的票保密。除工作人員或活動攤位外，請勿與其他任何人共享。"
-          }
-        }
-      }
-    },
-    "Please look for the QR code provided by the email and place it in the viewfinder" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "Please look for the QR code provided by the email and place it in the viewfinder"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "メールで提供されたQRコードを探し、ファインダーに配置してください"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "請尋找電子郵件提供的QR碼，並將其放置在取景器中"
-          }
-        }
-      }
-    },
-    "Please look for the token provided by the email and enter it in the field above" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "Please look for the token provided by the email and enter it in the field above"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "メールで提供されたトークンを確認し、上のフィールドに入力してください"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "請查找電子郵件提供的驗證碼，並在上方欄位中輸入"
           }
         }
       }
@@ -1713,50 +1261,6 @@
         }
       }
     },
-    "Scan QR code with camera" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "Scan QR code with camera"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "カメラでQRコードをスキャン"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "使用相機掃描QR碼"
-          }
-        }
-      }
-    },
-    "Scan to get token" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "Scan to get token"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "スキャンしてトークンを取得"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "掃描取得驗證碼"
-          }
-        }
-      }
-    },
     "Schedule" : {
       "localizations" : {
         "ja" : {
@@ -1817,28 +1321,6 @@
         }
       }
     },
-    "Select a picture to scan QR code" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "Select a picture to scan QR code"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "QRコードをスキャンする画像を選択"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "選擇照片掃描QR碼"
-          }
-        }
-      }
-    },
     "Select Event" : {
       "localizations" : {
         "en" : {
@@ -1863,34 +1345,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "選擇活動"
-          }
-        }
-      }
-    },
-    "Session Introduction" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "Session Introduction"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "セッション紹介"
-          }
-        },
-        "nan" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "議程簡介"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "議程簡介"
           }
         }
       }
@@ -1941,34 +1395,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "設定"
-          }
-        }
-      }
-    },
-    "Share" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "Share"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "共有"
-          }
-        },
-        "nan" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "分享"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "分享"
           }
         }
       }
@@ -2217,56 +1643,6 @@
         }
       }
     },
-    "Token" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "Token"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "トークン"
-          }
-        },
-        "nan" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Token"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "驗證碼"
-          }
-        }
-      }
-    },
-    "Translate" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "Translate"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "翻訳する"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "翻譯"
-          }
-        }
-      }
-    },
     "Try Again" : {
       "localizations" : {
         "en" : {
@@ -2313,28 +1689,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "二"
-          }
-        }
-      }
-    },
-    "Type" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "Type"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "タイプ"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "類型"
           }
         }
       }
