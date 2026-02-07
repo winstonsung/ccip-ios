@@ -1035,8 +1035,9 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Supporting Files/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = OPass;
+				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.reference";
-				INFOPLIST_KEY_NSCalendarsUsageDescription = "App requires your consent to access calendars during use";
+				INFOPLIST_KEY_NSCalendarsUsageDescription = "In order to add session detail to your calendars";
 				INFOPLIST_KEY_NSCameraUsageDescription = "Use camera to scan QR code in order to get token";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "App requires your consent to access location during use";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -1078,8 +1079,9 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Supporting Files/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = OPass;
+				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.reference";
-				INFOPLIST_KEY_NSCalendarsUsageDescription = "App requires your consent to access calendars during use";
+				INFOPLIST_KEY_NSCalendarsUsageDescription = "In order to add session detail to your calendars";
 				INFOPLIST_KEY_NSCameraUsageDescription = "Use camera to scan QR code in order to get token";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "App requires your consent to access location during use";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
