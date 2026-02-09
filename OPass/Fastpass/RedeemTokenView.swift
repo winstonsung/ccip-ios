@@ -25,7 +25,7 @@ struct RedeemTokenView: View {
     
     var body: some View {
         Form {
-            FastpassLogoView()
+            FastPassLogoView()
                 .frame(height: UIScreen.main.bounds.width * 0.4)
                 .listRowBackground(Color.white.opacity(0))
             

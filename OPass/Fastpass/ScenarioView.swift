@@ -23,7 +23,7 @@ struct ScenarioView: View {
     var body: some View {
         VStack {
             Form {
-                FastpassLogoView()
+                FastPassLogoView()
                     .frame(height: UIScreen.main.bounds.width * 0.4)
                     .listRowBackground(Color.clear)
                 
@@ -149,7 +149,7 @@ struct ScenarioView: View {
     }
 }
 
-struct FastpassLogoView: View {
+struct FastPassLogoView: View {
     
     @EnvironmentObject var EventStore: EventStore
     
