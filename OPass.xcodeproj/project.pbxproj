@@ -74,11 +74,11 @@
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
+		D3652A6E2869AF17002AC419 /* Modules */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Modules; sourceTree = "<group>"; };
+		D3A00F1D27D837D00097A6AB /* OneSignalNotificationServiceExtension */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (8B873BB62F39FF0C001F4430 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = OneSignalNotificationServiceExtension; sourceTree = "<group>"; };
 		D3D3788027CE43D700021FC4 /* OPassData */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = OPassData; sourceTree = "<group>"; };
 		D3E4E6BD27CD158400FFACEB /* OPass */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = OPass; sourceTree = "<group>"; };
 		D3F23B4B28166CE200A0FB35 /* Supporting Files */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (8B873B3A2F39FA51001F4430 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = "Supporting Files"; sourceTree = "<group>"; };
-		D3652A6E2869AF17002AC419 /* Modules */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Modules; sourceTree = "<group>"; };
-		D3A00F1D27D837D00097A6AB /* OneSignalNotificationServiceExtension */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (8B873BB62F39FF0C001F4430 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = OneSignalNotificationServiceExtension; sourceTree = "<group>"; };
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -187,10 +187,10 @@
 				D3A00F2227D837D00097A6AB /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
+				D3652A6E2869AF17002AC419 /* Modules */,
 				D3D3788027CE43D700021FC4 /* OPassData */,
 				D3E4E6BD27CD158400FFACEB /* OPass */,
 				D3F23B4B28166CE200A0FB35 /* Supporting Files */,
-				D3652A6E2869AF17002AC419 /* Modules */,
 			);
 			name = OPass;
 			packageProductDependencies = (
