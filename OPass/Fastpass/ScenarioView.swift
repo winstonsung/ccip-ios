@@ -3,7 +3,7 @@
 //  OPass
 //
 //  Created by 張智堯 on 2022/3/5.
-//  2025 OPass.
+//  2026 OPass.
 //
 
 import SwiftUI
@@ -24,8 +24,8 @@ struct ScenarioView: View {
         VStack {
             Form {
                 FastPassLogoView()
-                    .frame(height: UIScreen.main.bounds.width * 0.4)
-                    .listRowBackground(Color.clear)
+                    .frame(height: UIScreen.main.bounds.width * 0.3)
+                    .listRowBackground(Image(.appGradientBackground).resizable().brightness(0.1))
 
                 ForEach(EventStore.attendee?.scenarios.keys ?? [], id: \.self) { sectionID in
                     Section(header: Text(sectionID)) {
@@ -158,15 +158,14 @@ struct FastPassLogoView: View {
             Spacer()
             if let logo = EventStore.logo {
                 logo
-                    .renderingMode(.template)
+                    .renderingMode(.original)
                     .resizable()
                     .aspectRatio(contentMode: .fit)
-                    .foregroundColor(.logo)
             } else {
                 Text(EventStore.config.title.localized())
-                    .font(.system(.largeTitle, design: .rounded))
+                    .font(.system(.largeTitle))
                     .fontWeight(.medium)
-                    .foregroundColor(.logo)
+                    .foregroundStyle(.white)
             }
             Spacer()
         }

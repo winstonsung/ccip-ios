@@ -92,26 +92,29 @@ struct TicketView: View {
                         .background(.sectionBackground)
                 }
                 .task { try? await EventStore.loadAttendee() }
+                .toolbar {
+                    if let displayText = EventStore.config.feature(.ticket)?.title {
+                        ToolbarItem(placement: .principal) {
+                            Text(displayText.localized()).font(.headline)
+                        }
+                    }
+
+                    ToolbarItem(placement: .navigationBarTrailing) {
+                        if EventStore.token != nil {
+                            Button(action: {
+                                isSignOutAlertPresented.toggle()
+                            }) { Text(LocalizedStringKey("Sign Out")).foregroundColor(.red) }
+                        }
+                    }
+                }
             } else {
                 RedeemTokenView()
+                    .navigationTitle(EventStore.config.feature(.ticket)?.title.localized() ?? "Ticket")
+                    .navigationBarTitleDisplayMode(.inline)
             }
         }
-        .navigationBarTitleDisplayMode(.inline)
-        .toolbar {
-            if let displayText = EventStore.config.feature(.ticket)?.title {
-                ToolbarItem(placement: .principal) {
-                    Text(displayText.localized()).font(.headline)
-                }
-            }
 
-            ToolbarItem(placement: .navigationBarTrailing) {
-                if EventStore.token != nil {
-                    Button(action: {
-                        isSignOutAlertPresented.toggle()
-                    }) { Text(LocalizedStringKey("Sign Out")).foregroundColor(.red) }
-                }
-            }
-        }
+
         .alert("Are you sure you want to sign out?", isPresented: $isSignOutAlertPresented) {
             Button("Sign Out", role: .destructive) {
                 self.EventStore.signOut()

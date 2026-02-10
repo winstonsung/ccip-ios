@@ -26,8 +26,8 @@ struct RedeemTokenView: View {
     var body: some View {
         Form {
             FastPassLogoView()
-                .frame(height: UIScreen.main.bounds.width * 0.4)
-                .listRowBackground(Color.white.opacity(0))
+                .frame(height: UIScreen.main.bounds.width * 0.3)
+                .listRowBackground(Image(.appGradientBackground).resizable().brightness(0.1))
 
             Section {
                 Button { self.isCameraSOCPresented = true } label: {
@@ -132,8 +132,7 @@ struct RedeemTokenView: View {
                 }
             }
         }
-        .contentMargins(.top, 0)
-        .listSectionSpacing(5)
+        .contentMargins(.top, 10)
         .http403Alert(title: "Couldn't verify your identity", isPresented: $isHttp403AlertPresented)
         .alert("Couldn't verify your identity", message: "Invaild token", isPresented: $isInvaildTokenAlertPresented)
         .slideOverCard(isPresented: $isCameraSOCPresented, backgroundColor: (colorScheme == .dark ? .init(red: 28/255, green: 28/255, blue: 30/255) : .white)) {
@@ -290,6 +289,7 @@ struct RedeemTokenView_Previews: PreviewProvider {
         NavigationStack {
             RedeemTokenView()
                 .environmentObject(OPassStore.mock().event!)
+                .navigationTitle("Ticket")
         }
     }
 }
