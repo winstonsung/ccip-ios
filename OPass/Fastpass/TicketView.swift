@@ -10,7 +10,7 @@ import SwiftUI
 import QRCode
 
 struct TicketView: View {
-    
+
     @EnvironmentObject var EventStore: EventStore
     @State private var isTokenVisible = false
     @State private var isSignOutAlertPresented = false
@@ -19,7 +19,7 @@ struct TicketView: View {
     @AppStorage("AutoAdjustTicketBirghtness") var autoAdjustTicketBirghtness = true
     @Environment(\.scenePhase) var scenePhase
     @Environment(\.colorScheme) var colorScheme
-    
+
     var body: some View {
         VStack {
             if let token = EventStore.token {
@@ -51,7 +51,7 @@ struct TicketView: View {
                             }
                         }
                         .listRowBackground(Color.clear)
-                        
+
                         Section(header: Text("Token"), footer: Text("Please keep your ticket as a secret. Do not share it with anyone else but the staff or event booths.")) {
                             HStack {
                                 isTokenVisible
@@ -79,7 +79,7 @@ struct TicketView: View {
                             ResetBrightness()
                         }
                     }
-                    
+
                     Toggle("Auto-Brighten", isOn: $autoAdjustTicketBirghtness)
                         .onChange(of: autoAdjustTicketBirghtness) {
                             if autoAdjustTicketBirghtness {
@@ -103,7 +103,7 @@ struct TicketView: View {
                     Text(displayText.localized()).font(.headline)
                 }
             }
-            
+
             ToolbarItem(placement: .navigationBarTrailing) {
                 if EventStore.token != nil {
                     Button(action: {
@@ -119,7 +119,7 @@ struct TicketView: View {
             Button("Cancel", role: .cancel) { }
         }
     }
-    
+
     private func AutoAdjustBrightness() {
         if autoAdjustTicketBirghtness {
             UIScreen.main.brightness = 1
